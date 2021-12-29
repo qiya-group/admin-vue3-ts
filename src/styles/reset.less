@@ -1,0 +1,175 @@
+
+@charset "utf-8";
+// html标签默认样式格式化
+
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: @font-family;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    color: @font-default-color;
+    background-color: @color-bg;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    min-height: 100.01%;
+    // display: inline-block;
+    -webkit-overflow-scrolling : touch;
+    // scroll-behavior: smooth;
+    overflow: overlay;
+    // overflow: scroll;
+    // overflow: auto;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input::-ms-clear, input::-ms-reveal {
+    display: none;
+}
+
+button, input[type="button"], input[type="number"], input[type="search"], input[type="submit"], input[type="tel"], input[type="text"], textarea {
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: @primary;
+    &:hover {
+        color: @primary-hover;
+        text-decoration: none;
+    }
+    &:focus {
+        color: @primary-focus;
+    }
+    &[disabled] {
+        color: #ccc;
+        cursor: @primary-disabled;
+        pointer-events: none;
+    }
+}
+
+a:active, a:focus, a:hover, button, input, textarea {
+    outline: 0;
+}
+
+a:hover, .ipt:focus, .btn:hover, .btn:active, .sel:focus {
+    -webkit-transition: @transition-time;
+    -moz-transition: @transition-time;
+    transition: @transition-time;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.gray {
+    color: @fill-1;
+}
+
+::selection {
+    color: #fff;
+    background: @selection-bg;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: @selection-bg;
+}
+
+::-webkit-input-placeholder {
+    color: #A9ADB3!important;
+}
+
+::-moz-placeholder {
+    color: #A9ADB3 !important;
+}
+
+:-ms-input-placeholder {
+    color: #A9ADB3 !important;
+}
+
+body ::-webkit-scrollbar {
+    position: relative;
+    z-index: 100000;
+}
+
+body ::-webkit-scrollbar-track-piece {
+    background-color: #F1F1F1;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+body ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+body ::-webkit-scrollbar-thumb { 
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+    height: 50px;
+    background-color: #ccc;
+}
+body ::-webkit-scrollbar-corner {
+    background-color: #F1F1F1;
+}
+
+.eruda-entry-btn {
+    display: none !important;
+}
+
+.lock-html {
+    overflow-y: auto;
+    overflow: hidden;
+}
